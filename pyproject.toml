@@ -38,7 +38,7 @@ lint = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/searchcore/tgbot_ultimate_template"
+"Homepage" = "https://github.com/searchcore/bot"
 
 [project.scripts]
 tgbot = "tgbot.cli:cli"
