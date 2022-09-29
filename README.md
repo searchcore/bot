@@ -59,3 +59,8 @@ Absolute path to folder with bot's locale files
 Second way, OS independent.  
 You can copy .env file with variables to installed bot folder, right next to cli.py  
 If you made it by file and by environment, environment variables will be used. 
+
+
+### Run
+If you installed bot to venv, first activate it.
+Then type `tgbot` to console.
