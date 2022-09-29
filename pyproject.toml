@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[project]
+name = "tgbot"
+description = "Telegram bot template with aiogram, aiogram_dialog, fluentogram, SQLAlchemy"
+version = "0.0.0"
+
+authors = [
+    { name = "searchcore", email = "xsearchcorex@gmail.com" },
+]
+
+requires-python = ">=3.7"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "aiogram~=3.0.0b4",
+    "aiogram-dialog==2.0.0b9",
+    "fluent-compiler~=0.3",
+    "fluentogram==1.1.4",
+    "Jinja2==3.1.2",
+    "pydantic~=1.10.2",
+    "SQLAlchemy~=1.4.41",
+]
+
+[project.optional-dependencies]
+lint = [
+    "flake8"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/searchcore/tgbot_ultimate_template"
+
+[project.scripts]
+tgbot = "tgbot.cli:cli"
