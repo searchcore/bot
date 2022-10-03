@@ -26,10 +26,20 @@ class LocaleText(Text):
         mw_d = manager.data
         locale: Locale = mw_d.get(self._l_name)
 
-        for k, v in self._kwargs.items():
-            try:
-                self._kwargs[k] = v.format_map(data)
-            except KeyError:
-                pass
+        data_to_pass = {}
 
-        return locale.get(self.v_name, **self._kwargs)
+        data_to_pass.update(data)
+
+        for k, v in self._kwargs.items():
+            if not isinstance(v, str):
+                data_to_pass[k] = v
+                continue
+            try:
+                data_to_pass[k] = v.format_map(data)
+            except KeyError:
+                data_to_pass[k] = '%nodata%'
+
+        res = locale.get(self.v_name, **data_to_pass)
+        if res == None:
+            return f'[{self.v_name}]: locale error, check localization files'
+        return res
