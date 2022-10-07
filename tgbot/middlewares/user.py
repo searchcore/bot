@@ -3,8 +3,7 @@ from typing import Callable, Dict, Any, Awaitable, Union
 from aiogram import BaseMiddleware
 from aiogram.types import Update, Message, CallbackQuery
 
-from tgbot.services.repository import Repository
-from tgbot.services.repository.models import User
+from tgbot.services.repository.user import Repository, User
 
 
 class RegisterMiddleware(BaseMiddleware):

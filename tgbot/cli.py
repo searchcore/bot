@@ -27,7 +27,7 @@ from tgbot.services.locale import (
     Localizator,
     LocaleLoader
 )
-from tgbot.services.repository.repository import Database
+from tgbot.services.repository import Database
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(

@@ -1,6 +1,2 @@
-from .repository import (
-    Database,
-    Repository,
-)
-
-__all__ = [Database, Repository]
+from .database import Database
+from .abstract_repo import AbstractRepository
