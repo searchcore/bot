@@ -17,31 +17,11 @@ __Be careful!__ there is a little mess with middlewares, so it's tricky to send 
 ## Setup
 
 ### Installation
-
-#### From folder
-1. Go to root folder with pyproject.toml
-2. Run `pip install ./`
-4. Copy folder with locale files to your bot's directory (or anywhere you want)
-#### From *.tar.gz
-1. Go to folder with *.tar.gz
-2. __Optional__ you can install bot to global environment or to virtual environment. If you want to place your bot into the current folder, do the following:  
-    1. `python -m venv venv`
-    2. [Activate your virtual environment](https://docs.python.org/3/tutorial/venv.html#:~:text=Once%20you%E2%80%99ve%20created%20a%20virtual%20environment%2C%20you%20may%20activate%20it.) (It depends on your OS)
-3. `pip install path/to/bot.tar.gz`
-4. Copy folder with locale files to your bot's directory (or anywhere you want)
-__If you installed your bot with venv,__  
-you have to activate your virtual env every time you want to run your bot.
-When you stop your bot, it's recommended to execute `deactivate` to leave venv.
-
-### Distribution
-1. Go to root folder with pyproject.toml
-2. Run `python -m build`
-3. Use *.whl and *.tar.gz files under `./dist/` folder to install bot  
-Don't forget to provide locale files!
+Just create venv in your bot's folder, activate it, install packages from 'requirements.txt'
 
 ### Setup
 You can do it in two ways: OS specific and OS independent.  
-First way, OS specific.  
+##### First way, OS specific.  
 You have to provide environment variables, listed in .env.dist  
   
 Token from botfather  
@@ -53,14 +33,11 @@ DSN URL in SQLAlchemy format
 Print additional info to console (True or False)  
 `TGBOT_ECHO=False`  
   
-Absolute path to folder with bot's locale files  
-`TGBOT_LOCALES_FOLDER='path/to/locales'`  
-  
-Second way, OS independent.  
+##### Second way, OS independent.  
 You can copy .env file with variables to installed bot folder, right next to cli.py  
 If you made it by file and by environment, environment variables will be used. 
 
 
 ### Run
 If you installed bot to venv, first activate it.
-Then type `tgbot` to console.
+Then type `python -m tgbot` to console in your bot's folder.

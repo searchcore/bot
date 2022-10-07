@@ -71,7 +71,9 @@ async def main():
 
     dp.include_router(user_router)
 
-    fluent = _configure_fluent(config.locales_folder)
+    fluent = _configure_fluent(
+        BOTFOLDER / Path("locales/")
+    )
 
     # Middleware
     dp.update.outer_middleware.register(RepoMiddleware(db=database))

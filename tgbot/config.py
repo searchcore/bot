@@ -4,7 +4,6 @@ from pydantic import BaseSettings
 class BotConfig(BaseSettings):
     token: str
     dsn: str
-    locales_folder: str
     redis_storage: bool = False
     echo: bool = False
 
