@@ -19,6 +19,5 @@ async def cmd_start(
 ):
     await dialog_manager.start(
         UserMain.SOME_STATE,
-        data=locale,
         mode=StartMode.RESET_STACK
     )
