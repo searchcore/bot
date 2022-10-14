@@ -9,25 +9,25 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram_dialog import DialogRegistry
 
 # Middlewares
-from tgbot.middlewares.repo import RepoMiddleware
-from tgbot.middlewares.user import RegisterMiddleware
-from tgbot.middlewares.locale import LocaleMiddleware
+from bot.middlewares.repo import RepoMiddleware
+from bot.middlewares.user import RegisterMiddleware
+from bot.middlewares.locale import LocaleMiddleware
 
 # Routers
-from tgbot.handlers.user import router as user_router
+from bot.handlers.user import router as user_router
 
 # Dialogs
-from tgbot.handlers.dialog.user import dialog as user_dialog
+from bot.handlers.dialog.user import dialog as user_dialog
 
 # Config
-from tgbot.config import BotConfig
+from bot.config import BotConfig
 
 # Services
-from tgbot.services.locale import (
+from bot.services.locale import (
     Localizator,
     LocaleLoader
 )
-from tgbot.services.repository import Database
+from bot.services.repository import Database
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(

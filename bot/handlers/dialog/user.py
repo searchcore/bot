@@ -3,8 +3,8 @@ from aiogram_dialog.widgets.kbd import Button
 from aiogram_dialog.widgets.text import Const
 from aiogram_dialog import Dialog, DialogManager
 
-from tgbot.services.integration import LocaleText
-from tgbot.states.user import UserMain
+from bot.services.integration import LocaleText
+from bot.states.user import UserMain
 
 
 async def get_data(dialog_manager: DialogManager, **kwargs):

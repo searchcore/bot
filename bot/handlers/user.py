@@ -3,9 +3,9 @@ from aiogram.types import Message
 
 from aiogram_dialog import DialogManager, StartMode
 
-from tgbot.services.locale import Locale
-from tgbot.services.repository.user import User
-from tgbot.states.user import UserMain
+from bot.services.locale import Locale
+from bot.services.repository.user import User
+from bot.states.user import UserMain
 
 router = Router()
 

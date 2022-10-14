@@ -25,13 +25,13 @@ You can do it in two ways: OS specific and OS independent.
 You have to provide environment variables, listed in .env.dist  
   
 Token from botfather  
-`TGBOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11` 
+`BOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11` 
   
 DSN URL in SQLAlchemy format  
-`TGBOT_DSN='sqlite+pysqlite:///:memory:'`  
+`BOT_DSN='sqlite+pysqlite:///:memory:'`  
   
 Print additional info to console (True or False)  
-`TGBOT_ECHO=False`  
+`BOT_ECHO=False`  
   
 ##### Second way, OS independent.  
 You can copy .env file with variables to installed bot folder, right next to cli.py  
@@ -40,4 +40,4 @@ If you made it by file and by environment, environment variables will be used.
 
 ### Run
 If you installed bot to venv, first activate it.
-Then type `python -m tgbot` to console in your bot's folder.
+Then type `python -m bot` to console in your bot's folder.

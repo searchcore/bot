@@ -3,8 +3,8 @@ from typing import Callable, Dict, Any, Awaitable
 from aiogram import BaseMiddleware
 from aiogram.types import Update
 
-from tgbot.services.repository import Database
-from tgbot.services.repository.user import Repository
+from bot.services.repository import Database
+from bot.services.repository.user import Repository
 
 
 class RepoMiddleware(BaseMiddleware):

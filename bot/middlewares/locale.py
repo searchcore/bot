@@ -3,7 +3,7 @@ from typing import Callable, Dict, Any, Awaitable, Union
 from aiogram import BaseMiddleware
 from aiogram.types import Update, Message, CallbackQuery
 
-from tgbot.services.locale import (
+from bot.services.locale import (
     Localizator,
     Locale
 )

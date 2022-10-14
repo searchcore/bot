@@ -9,6 +9,6 @@ class BotConfig(BaseSettings):
 
     class Config:
         case_sensitive = False
-        env_prefix = 'tgbot_'
+        env_prefix = 'bot_'
         env_file_encoding = 'utf-8'
         env_nested_delimiter = "__"

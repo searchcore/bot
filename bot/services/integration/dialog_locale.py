@@ -1,5 +1,5 @@
 from aiogram_dialog import DialogManager
-from tgbot.services.locale import Locale
+from bot.services.locale import Locale
 
 from aiogram_dialog.widgets.text import Text
 from aiogram_dialog.widgets.when import (
