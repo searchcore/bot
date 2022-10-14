@@ -58,8 +58,11 @@ async def main():
     storage = MemoryStorage()
 
     if config.redis_storage:
-        # storage = RedisStorage()
-        pass
+        from aiogram.fsm.storage.redis import RedisStorage, DefaultKeyBuilder
+        storage = RedisStorage.from_url(
+            "redis://localhost",
+            key_builder=DefaultKeyBuilder(with_destiny=True)
+        )
 
     bot = Bot(token=config.token)
     dp = Dispatcher(storage=storage)
