@@ -40,6 +40,6 @@ class LocaleText(Text):
                 data_to_pass[k] = '%nodata%'
 
         res = locale.get(self.v_name, **data_to_pass)
-        if res == None:
+        if res is None:
             return f'[{self.v_name}]: locale error, check localization files'
         return res

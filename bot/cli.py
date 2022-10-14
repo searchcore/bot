@@ -17,7 +17,7 @@ from bot.middlewares.locale import LocaleMiddleware
 from bot.handlers.user import router as user_router
 
 # Dialogs
-from bot.handlers.dialog.user import dialog as user_dialog
+from bot.dialogs.user import dialog as user_dialog
 
 # Config
 from bot.config import BotConfig
@@ -79,12 +79,24 @@ async def main():
     )
 
     # Middleware
-    dp.update.outer_middleware.register(RepoMiddleware(db=database))
-    dp.callback_query.outer_middleware.register(RepoMiddleware(db=database))
-    dp.message.outer_middleware.register(RegisterMiddleware())
-    dp.callback_query.outer_middleware.register(RegisterMiddleware())
-    dp.message.outer_middleware.register(LocaleMiddleware(localizator=fluent))
-    dp.callback_query.outer_middleware.register(LocaleMiddleware(localizator=fluent))
+    dp.update.outer_middleware.register(
+        RepoMiddleware(db=database)
+    )
+    dp.callback_query.outer_middleware.register(
+        RepoMiddleware(db=database)
+    )
+    dp.message.outer_middleware.register(
+        RegisterMiddleware()
+    )
+    dp.callback_query.outer_middleware.register(
+        RegisterMiddleware()
+    )
+    dp.message.outer_middleware.register(
+        LocaleMiddleware(localizator=fluent)
+    )
+    dp.callback_query.outer_middleware.register(
+        LocaleMiddleware(localizator=fluent)
+    )
 
     try:
         await bot.delete_webhook(drop_pending_updates=True)
