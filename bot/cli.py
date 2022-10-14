@@ -27,7 +27,7 @@ from bot.services.locale import (
     Localizator,
     LocaleLoader
 )
-from bot.services.repository import Database
+from bot.services.database import Database
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(

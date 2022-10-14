@@ -11,7 +11,7 @@ async def get_data(dialog_manager: DialogManager, **kwargs):
     mw_d = dialog_manager.data
 
     data = dict()
-    data['user_name'] = mw_d.get('repo__user').name
+    data['user_name'] = mw_d.get('db_user').nickname
 
     return data
 

@@ -3,8 +3,7 @@ from typing import Callable, Dict, Any, Awaitable
 from aiogram import BaseMiddleware
 from aiogram.types import Update
 
-from bot.services.repository import Database
-from bot.services.repository.user import Repository
+from bot.services.database import Database
 
 
 class RepoMiddleware(BaseMiddleware):
@@ -19,8 +18,8 @@ class RepoMiddleware(BaseMiddleware):
     ) -> Any:
 
         with self.db.new_session() as session:
-            data["repo"]: Repository = Repository(session)
 
+            data["session"] = session
             await handler(event, data)
 
-            data["repo"].commit_pending()
+            session.commit()
