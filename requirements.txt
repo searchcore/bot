@@ -6,3 +6,4 @@ Jinja2==3.1.2
 pydantic~=1.10.2
 SQLAlchemy~=1.4.41
 redis==4.2.0rc1
+psycopg2==2.9.4
