@@ -1,9 +1,9 @@
-aiogram~=3.0.0b4
+aiogram==3.0.0b4
 aiogram-dialog==2.0.0b9
-fluent-compiler~=0.3
+fluent-compiler==0.3
 fluentogram==1.1.4
 Jinja2==3.1.2
-pydantic~=1.10.2
-SQLAlchemy~=1.4.41
+pydantic==1.10.2
+SQLAlchemy==1.4.41
 redis==4.2.0rc1
 psycopg2==2.9.4
